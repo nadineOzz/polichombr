@@ -24,3 +24,4 @@ python-magic
 requests
 sqlalchemy-migrate
 yara-python
+email_validator
