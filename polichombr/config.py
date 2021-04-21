@@ -12,7 +12,7 @@ BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
 # used for server creation and skelenox script generation
 SERVER_ADDR = "0.0.0.0"
-SERVER_PORT = 8000
+SERVER_PORT = 7500
 
 # database settings
 SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(BASE_DIR, 'app.db')
