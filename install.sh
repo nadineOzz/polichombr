@@ -7,4 +7,4 @@ git submodule update metasm
 
 virtualenv flask
 source flask/bin/activate
-pip install -r requirements.txt
+
