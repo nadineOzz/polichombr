@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM debian
 
 #Get yourself into the /opt/ directory
 WORKDIR /opt/
