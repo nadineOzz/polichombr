@@ -18,5 +18,5 @@ sed -i '/STORAGE_PATH/c\STORAGE_PATH = "/opt/data/storage"' polichombr/config.py
 
 
 mv /opt/polichombr/examples/db_create.py .
-python db_create.py
+#python db_create.py
 
