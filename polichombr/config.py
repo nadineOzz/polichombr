@@ -15,7 +15,7 @@ SERVER_ADDR = "0.0.0.0"
 SERVER_PORT = 7500
 
 # database settings
-SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(BASE_DIR, 'app.db')
+SQLALCHEMY_DATABASE_URI = "sqlite:////opt/data/app.db"
 SQLALCHEMY_MIGRATE_REPO = os.path.join(BASE_DIR, 'db_repository')
 SQLALCHEMY_TRACK_MODIFICATIONS = True
 DATABASE_CONNECT_OPTIONS = {}
@@ -35,7 +35,7 @@ SECURITY_PASSWORD_SALT = 'CHANGEMEINPRODUCTION'
 SECURITY_TRACKABLE = True
 
 # polichombr options
-STORAGE_PATH = "polichombr/storage"
+STORAGE_PATH = "/opt/data/storage"
 TASKS_PATH = "polichombr/controllers/tasks"
 ANALYSIS_PROCESS_POOL_SIZE = 3
 API_PATH = "/api/1.0"
