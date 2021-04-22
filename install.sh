@@ -16,15 +16,10 @@ pip install -r requirements.txt
 sed -i '/SQLALCHEMY_DATABASE_URI/c\SQLALCHEMY_DATABASE_URI = "sqlite:////opt/data/app.db"' polichombr/config.py
 sed -i '/STORAGE_PATH/c\STORAGE_PATH = "/opt/data/storage"' polichombr/config.py
 
-<<<<<<< HEAD
 mkdir /opt/data
 
 mv /opt/polichombr/examples/db_create.py .
 python db_create.py
 
-=======
 
-mv /opt/polichombr/examples/db_create.py .
-#python db_create.py
->>>>>>> 96b1fd43c158427fc2c651598b788f56a1472691
 
