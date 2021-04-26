@@ -18,5 +18,6 @@ RUN git clone https://github.com/nadine2497/polichombr.git
 WORKDIR /opt/polichombr/
 
 #Execute the install.sh file 
-RUN ./install.sh
+RUN chmod +x ./init.sh \
+&&  ./install.sh
 
