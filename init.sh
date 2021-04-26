@@ -1,4 +1,3 @@
 #!/bin/bash
 
-source /opt/polichombr/flask/bin/activate
-./db_create.py
+. /opt/polichombr/flask/bin/activate && /opt/polichombr/db_create.py
