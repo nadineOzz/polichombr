@@ -7,12 +7,11 @@ On the host machine:
 
 ```
    mkdir FOLDER_NAME
-   mkdir FOLDER_NAME/data
    mkdir FOLDER_NAME/opt
    mkdir FOLDER_NAME/opt/data
    cd    FOLDER_NAME/opt
-   docker build -t polichombr .
-   docker run --rm -d --name [CONTAINER_NAME] -v $PATH/data:/opt/data -p 7500:7500 -ti polichombr
+   docker build -t [DOCKER_IMAGE_NAME] .
+   docker run --rm -d --name [CONTAINER_NAME] -v $PATH/data:/opt/data -p 7500:7500 -ti [DOCKER_IMAGE_NAME]
    ```
 Access the docker container
 
@@ -32,8 +31,7 @@ Please enjoy your new polichombr instance by accessing your host at  port 7500
 
 *IF IT DOES NOT WORK:*
 
-You may need to edit the init.sh file in the docker container
-Please modify it like under:
+Please make sure the init.sh file looks like below:
 
 ```
    . /opt/polichombr/flask/bin/activate && /opt/polichombr/db_create.py
