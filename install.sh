@@ -13,8 +13,8 @@ source flask/bin/activate
 pip install -r requirements.txt 
 
 #Modify the conf.py file
-sed -i '/SQLALCHEMY_DATABASE_URI/c\SQLALCHEMY_DATABASE_URI = "sqlite:////home/kali/polichombr/opt/data/app.db"' /home/kali/polichombr/opt/polichombr/polichombr/config.py
-sed -i '/STORAGE_PATH/c\STORAGE_PATH = "/home/kali/polichombr/opt/data/storage"' /home/kali/polichombr/opt/polichombr/polichombr/config.py
+sed -i '/SQLALCHEMY_DATABASE_URI/c\SQLALCHEMY_DATABASE_URI = "sqlite:////opt/data/app.db"' polichombr/config.py
+sed -i '/STORAGE_PATH/c\STORAGE_PATH = "/opt/data/storage"' polichombr/config.py
 
 mkdir /opt/data
 
