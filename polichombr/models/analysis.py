@@ -9,6 +9,7 @@
 """
 
 from polichombr import db, ma
+from marshmallow import Schema
 
 
 class AnalysisResult(db.Model):
@@ -26,7 +27,7 @@ class AnalysisResult(db.Model):
     type = db.Column(db.String())
 
 
-class AnalysisResultSchema(ma.ModelSchema):
+class AnalysisResultSchema(Schema):
 
     """
     Export schema.
