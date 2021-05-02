@@ -9,7 +9,7 @@
         including the corresponding relations
 """
 
-from marshmallow import fields
+from marshmallow import Schema, fields
 
 from polichombr import db, ma
 
@@ -296,7 +296,7 @@ class Sample(db.Model):
         return 'Sample %d' % self.id
 
 
-class FunctionInfoSchema(ma.ModelSchema):
+class FunctionInfoSchema(Schema):
 
     """
         Marshmallow wrapper for FunctionInfo model
@@ -309,7 +309,7 @@ class FunctionInfoSchema(ma.ModelSchema):
                   'machoc_hash')
 
 
-class SampleMatchSchema(ma.ModelSchema):
+class SampleMatchSchema(Schema):
 
     """
     Match schema.
@@ -321,7 +321,7 @@ class SampleMatchSchema(ma.ModelSchema):
                   'match_type')
 
 
-class SampleSchema(ma.ModelSchema):
+class SampleSchema(Schema):
 
     """
     Sample schema.
