@@ -9,7 +9,7 @@
 """
 
 from datetime import datetime
-
+from marshmallow import Schema
 from polichombr import db, ma
 
 
@@ -39,7 +39,7 @@ class YaraRule(db.Model):
         self.TLP_sensibility = tlp_level
 
 
-class YaraSchema(ma.ModelSchema):
+class YaraSchema(Schema):
 
     class Meta(object):
         fields = ('id',
