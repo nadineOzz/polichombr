@@ -8,7 +8,7 @@
         Models representing malware families.
 """
 
-from marshmallow import fields
+from marshmallow import Schema, fields
 
 from polichombr import db, ma
 from polichombr.models.sample import SampleSchema
@@ -123,7 +123,7 @@ class Family(db.Model):
         self.name = name
 
 
-class FamilySchema(ma.ModelSchema):
+class FamilySchema(Schema):
     """
     Schema for exporting by marshalling in JSON.
     """
