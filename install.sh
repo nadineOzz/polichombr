@@ -6,7 +6,7 @@ git submodule init metasm # or clone github.com/jjyg/metasm
 git submodule update metasm
 
 #Create & activate the virtual environment
-virtualenv flask
+python3 -m venv flask
 source flask/bin/activate
 
 #Install packages
