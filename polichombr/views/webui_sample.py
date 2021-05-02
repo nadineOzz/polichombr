@@ -11,7 +11,7 @@
 from flask import render_template, g, redirect, url_for, flash
 from flask import abort, request, jsonify
 
-from werkzeug import secure_filename
+from werkzeug.utils import secure_filename
 from flask_security import login_required
 
 from polichombr import api
