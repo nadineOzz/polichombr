@@ -11,7 +11,7 @@
 
 from polichombr import db, ma
 from flask_security import UserMixin, RoleMixin
-
+from marshmallow import Schema
 
 def create_link_tables(table1, table2):
     """
@@ -95,7 +95,7 @@ class User(db.Model, UserMixin):
         return '<User %r>' % (self.nickname)
 
 
-class UserSchema(ma.ModelSchema):
+class UserSchema(Schema):
     """
     Schema representation.
     """
