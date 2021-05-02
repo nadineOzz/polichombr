@@ -8,7 +8,7 @@
         Models to implement IDA Pro objects server side.
 """
 
-from marshmallow import fields
+from marshmallow import Schema, fields
 
 from polichombr import db, ma
 
@@ -124,7 +124,7 @@ class IDAStructMember(db.Model):
     offset = db.Column(db.Integer())
 
 
-class IDAActionSchema(ma.ModelSchema):
+class IDAActionSchema(Schema):
     class Meta:
         fields = (
             "timestamp",
@@ -133,7 +133,7 @@ class IDAActionSchema(ma.ModelSchema):
             "type")
 
 
-class IDAStructMemberSchema(ma.ModelSchema):
+class IDAStructMemberSchema(Schema):
     class Meta:
         fields = (
             "id",
@@ -143,7 +143,7 @@ class IDAStructMemberSchema(ma.ModelSchema):
             "mtype")
 
 
-class IDAStructSchema(ma.ModelSchema):
+class IDAStructSchema(Schema):
     members = fields.Nested('IDAStructMemberSchema',
                             only=['id', 'name', 'offset', 'size', 'mtype'],
                             many=True)
