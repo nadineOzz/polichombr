@@ -6,11 +6,13 @@ git submodule init metasm # or clone github.com/jjyg/metasm
 git submodule update metasm
 
 #Create & activate the virtual environment
+
 python3 -m venv flask
 source flask/bin/activate
 
 #Install packages
-pip install -r requirements.txt 
+pip3 install wheel
+pip3 install -r requirements.txt 
 
 #Modify the conf.py file
 sed -i '/SQLALCHEMY_DATABASE_URI/c\SQLALCHEMY_DATABASE_URI = "sqlite:////opt/data/app.db"' polichombr/config.py
