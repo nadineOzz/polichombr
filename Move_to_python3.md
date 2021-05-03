@@ -40,6 +40,7 @@ Compared to the ANSSI's project, some modifications need to be made in order to 
   ```
   
   **4. Marshmallow library updates**
+  
    **a. Add in all the files "from marshmallow import Schema" at line 11**
    ```
   sed '11ifrom marshmallow import Schema' polichombr/models/user.py 
@@ -64,7 +65,8 @@ Compared to the ANSSI's project, some modifications need to be made in order to 
    sed -i 's/from werkzeug import secure_filename/from werkzeug.utils import secure_filename/g' polichombr/views/webui_families.py
    sed -i 's/from werkzeug import secure_filename/from werkzeug.utils import secure_filename/g' polichombr/views/webui_sample.py
    ```
-  **6. Copy & run db_create.py in the current directory
+   
+  **6. Copy & run db_create.py in the current directory**
   ```
    cp ./examples/db_create.py .  
    python3 db_create.py
