@@ -21,10 +21,13 @@ Compared to the ANSSI's project, some modifications need to be made in order to 
 
 - **STEP 3: Modify the install.sh file by adding:**
    
-   **1. Install packages**
+   **1. Install packages & metasm git**
   ```
    pip3 install wheel
    pip3 install -r requirements.txt
+   
+   git submodule init metasm
+   git submodule update metasm
    ```
    
   **2. Modify the conf.py file**
@@ -37,27 +40,16 @@ Compared to the ANSSI's project, some modifications need to be made in order to 
   
    **a. Add in all the files "from marshmallow import Schema" at line 11**
    ```
-  sed -i '11ifrom marshmallow import Schema' polichombr/models/user.py 
-  sed -i '11ifrom marshmallow import Schema' polichombr/models/analysis.py 
-  sed -i '11ifrom marshmallow import Schema' polichombr/models/sample.py 
-  sed -i '11ifrom marshmallow import Schema' polichombr/models/idaactions.py 
-  sed -i '11ifrom marshmallow import Schema' polichombr/models/yara_rule.py 
-  sed -i '11ifrom marshmallow import Schema' polichombr/models/family.py 
+  sed -i '11ifrom marshmallow import Schema' polichombr/models/user.py polichombr/models/analysis.py polichombr/models/sample.py polichombr/models/idaactions.py polichombr/models/yara_rule.py polichombr/models/family.py 
   ```
    **b. Modify all the 'ma.ModelSchema' to 'Schema'**
    ```
-  sed -i 's/ma.ModelSchema/Schema/g' polichombr/models/user.py
-  sed -i 's/ma.ModelSchema/Schema/g' polichombr/models/analysis.py
-  sed -i 's/ma.ModelSchema/Schema/g' polichombr/models/sample.py
-  sed -i 's/ma.ModelSchema/Schema/g' polichombr/models/idaactions.py
-  sed -i 's/ma.ModelSchema/Schema/g' polichombr/models/yara_rule.py
-  sed -i 's/ma.ModelSchema/Schema/g' polichombr/models/family.py
+  sed -i 's/ma.ModelSchema/Schema/g' polichombr/models/user.py polichombr/models/analysis.py polichombr/models/sample.py polichombr/models/idaactions.py polichombr/models/yara_rule.py polichombr/models/family.py
   ```
   
   **4. Werkzeug library updates**
    ```
-   sed -i 's/from werkzeug import secure_filename/from werkzeug.utils import secure_filename/g' polichombr/views/webui_families.py
-   sed -i 's/from werkzeug import secure_filename/from werkzeug.utils import secure_filename/g' polichombr/views/webui_sample.py
+   sed -i 's/from werkzeug import secure_filename/from werkzeug.utils import secure_filename/g' polichombr/views/webui_families.py polichombr/views/webui_sample.py
    ```
    
   **5. Copy & run db_create.py in the current directory**
@@ -85,12 +77,7 @@ Compared to the ANSSI's project, some modifications need to be made in order to 
   ./install.sh
   ```
 
-- **STEP 7: Activate the virtual environment**
-  ```
-  . flask/bin/activate
-  ```
-  
-- **STEP 8: Run the run.py file**
+- **STEP 7: Run the run.py file**
   ```
   ./run.py
   ```
