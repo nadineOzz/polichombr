@@ -52,12 +52,12 @@ Compared to the ANSSI's project, some modifications need to be made in order to 
   ```
    **b. Modify all the 'ma.ModelSchema' to 'Schema'**
    ```
-  sed -i 's/ma.ModelSchema/g' polichombr/models/user.py
-  sed -i 's/ma.ModelSchema/g' polichombr/models/analysis.py
-  sed -i 's/ma.ModelSchema/g' polichombr/models/sample.py
-  sed -i 's/ma.ModelSchema/g' polichombr/models/idaactions.py
-  sed -i 's/ma.ModelSchema/g' polichombr/models/yara_rule.py
-  sed -i 's/ma.ModelSchema/g' polichombr/models/family.py
+  sed -i 's/ma.ModelSchema/Schema/g' polichombr/models/user.py
+  sed -i 's/ma.ModelSchema/Schema/g' polichombr/models/analysis.py
+  sed -i 's/ma.ModelSchema/Schema/g' polichombr/models/sample.py
+  sed -i 's/ma.ModelSchema/Schema/g' polichombr/models/idaactions.py
+  sed -i 's/ma.ModelSchema/Schema/g' polichombr/models/yara_rule.py
+  sed -i 's/ma.ModelSchema/Schema/g' polichombr/models/family.py
   ```
   
   **5. Werkzeug library updates**
