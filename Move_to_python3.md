@@ -43,12 +43,12 @@ Compared to the ANSSI's project, some modifications need to be made in order to 
   
    **a. Add in all the files "from marshmallow import Schema" at line 11**
    ```
-  sed '11ifrom marshmallow import Schema' polichombr/models/user.py 
-  sed '11ifrom marshmallow import Schema' polichombr/models/analysis.py 
-  sed '11ifrom marshmallow import Schema' polichombr/models/sample.py 
-  sed '11ifrom marshmallow import Schema' polichombr/models/idaactions.py 
-  sed '11ifrom marshmallow import Schema' polichombr/models/yara_rule.py 
-  sed '11ifrom marshmallow import Schema' polichombr/models/family.py 
+  sed -i '11ifrom marshmallow import Schema' polichombr/models/user.py 
+  sed -i '11ifrom marshmallow import Schema' polichombr/models/analysis.py 
+  sed -i '11ifrom marshmallow import Schema' polichombr/models/sample.py 
+  sed -i '11ifrom marshmallow import Schema' polichombr/models/idaactions.py 
+  sed -i '11ifrom marshmallow import Schema' polichombr/models/yara_rule.py 
+  sed -i '11ifrom marshmallow import Schema' polichombr/models/family.py 
   ```
    **b. Modify all the 'ma.ModelSchema' to 'Schema'**
    ```
