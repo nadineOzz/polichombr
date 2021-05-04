@@ -6,7 +6,7 @@ git submodule update metasm
 
 
 #Create virtual environment & activate it 
-virtualenv flask
+python3 -m venv flask
 source flask/bin/activate
 
 pip3 install wheel 
