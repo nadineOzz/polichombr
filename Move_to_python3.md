@@ -21,25 +21,19 @@ Compared to the ANSSI's project, some modifications need to be made in order to 
 
 - **STEP 3: Modify the install.sh file by adding:**
    
-  **1. Create the virtual environment**
-  ```
-   sudo apt-get install python3-venv
-   python3 -m venv flask
-  ```
-  
-  **2. Install packages**
+   **1. Install packages**
   ```
    pip3 install wheel
    pip3 install -r requirements.txt
    ```
    
-  **3. Modify the conf.py file**
+  **2. Modify the conf.py file**
   ```
   sed -i '/SQLALCHEMY_DATABASE_URI/c\SQLALCHEMY_DATABASE_URI = "sqlite:////$ABSOLUTE_PATH/opt/data/app.db"' ./polichombr/config.py
   sed -i '/STORAGE_PATH/c\STORAGE_PATH = "$ABSOLUTE_PATH/opt/data/storage"' ./polichombr/config.py
   ```
   
-  **4. Marshmallow library updates**
+  **3. Marshmallow library updates**
   
    **a. Add in all the files "from marshmallow import Schema" at line 11**
    ```
@@ -60,23 +54,30 @@ Compared to the ANSSI's project, some modifications need to be made in order to 
   sed -i 's/ma.ModelSchema/Schema/g' polichombr/models/family.py
   ```
   
-  **5. Werkzeug library updates**
+  **4. Werkzeug library updates**
    ```
    sed -i 's/from werkzeug import secure_filename/from werkzeug.utils import secure_filename/g' polichombr/views/webui_families.py
    sed -i 's/from werkzeug import secure_filename/from werkzeug.utils import secure_filename/g' polichombr/views/webui_sample.py
    ```
    
-  **6. Copy & run db_create.py in the current directory**
+  **5. Copy & run db_create.py in the current directory**
   ```
    cp ./examples/db_create.py .  
    python3 db_create.py
    ```
-
+   
 - **STEP 4: Modify the requirements.txt file**
    ```
    _DO NOT ADD_ default version to the librairies.
    ADD the _email_validator_ library that validates that a string is of the form name@example.com
    REMOVE _flask_cors, flask_login, itsdangerous, Jinja2, MarkupSafe, Werkzeug, WTForms_ because they are installed by default when flask is installed.
+  ```
+  
+-**STEP 5: Create & activate a virtual environment called flask**
+ ```
+   sudo apt-get install python3-venv
+   python3 -m venv flask
+   . flask/bin/activate
   ```
 
 - **STEP 5: Run the install.sh file**
