@@ -32,8 +32,8 @@ Compared to the ANSSI's project, some modifications need to be made in order to 
    
   **2. Modify the conf.py file**
   ```
-  sed -i '/SQLALCHEMY_DATABASE_URI/c\SQLALCHEMY_DATABASE_URI = "sqlite:////$ABSOLUTE_PATH/opt/data/app.db"' ./polichombr/config.py
-  sed -i '/STORAGE_PATH/c\STORAGE_PATH = "$ABSOLUTE_PATH/opt/data/storage"' ./polichombr/config.py
+  sed -i "/SQLALCHEMY_DATABASE_URI/c\SQLALCHEMY_DATABASE_URI =\"sqlite:////$install_path/data/app.db\"" ./polichombr/config.py
+  sed -i "/STORAGE_PATH/c\STORAGE_PATH =\"$install_path/data/storage\"" ./polichombr/config.py
   ```
   
   **3. Marshmallow library updates**
@@ -81,5 +81,7 @@ Compared to the ANSSI's project, some modifications need to be made in order to 
   ```
   ./run.py
   ```
+  
+  RQ : Add "import sqlite3" in polichombr/config.py
 
 
