@@ -11,18 +11,10 @@ source flask/bin/activate
 
 pip3 install wheel 
 pip3 install -r requirements.txt
+
 #Modify the conf.py file
 sed -i '/SQLALCHEMY_DATABASE_URI/c\SQLALCHEMY_DATABASE_URI = "sqlite:////home/kali/poli/opt/data/app.db"' /home/kali/poli/polichombr/polichombr/config.py
 sed -i '/STORAGE_PATH/c\STORAGE_PATH = "/home/kali/poli/opt/data/storage"' /home/kali/poli/polichombr/polichombr/config.py
-
-#Marshmallow library updates
-sed -i '11ifrom marshmallow import Schema' polichombr/models/user.py polichombr/models/analysis.py polichombr/models/sample.py polichombr/models/idaactions.py polichombr/models/yara_rule.py polichombr/models/family.py 
-sed -i 's/ma.ModelSchema/Schema/g' polichombr/models/user.py polichombr/models/analysis.py polichombr/models/sample.py polichombr/models/idaactions.py polichombr/models/yara_rule.py polichombr/models/family.py
-
-#Werkzeug library updates
-sed -i 's/from werkzeug import mkdir /opt/datasecure_filename/from werkzeug.utils import secure_filename/g' polichombr/views/webui_families.py polichombr/views/webui_sample.py
-
-mkdir /opt/data
 
 mv /opt/polichombr/examples/db_create.py .
 python3 db_create.py
