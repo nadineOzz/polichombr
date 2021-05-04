@@ -22,6 +22,8 @@ sed -i 's/ma.ModelSchema/Schema/g' polichombr/models/user.py polichombr/models/a
 #Werkzeug library updates
 sed -i 's/from werkzeug import mkdir /opt/datasecure_filename/from werkzeug.utils import secure_filename/g' polichombr/views/webui_families.py polichombr/views/webui_sample.py
 
+mkdir /opt/data
+
 mv /opt/polichombr/examples/db_create.py .
 python3 db_create.py
 
