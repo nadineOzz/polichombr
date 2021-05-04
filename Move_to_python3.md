@@ -73,24 +73,24 @@ Compared to the ANSSI's project, some modifications need to be made in order to 
    REMOVE _flask_cors, flask_login, itsdangerous, Jinja2, MarkupSafe, Werkzeug, WTForms_ because they are installed by default when flask is installed.
   ```
   
--**STEP 5: Create & activate a virtual environment called flask**
+- **STEP 5: Create & activate a virtual environment called flask**
  ```
    sudo apt-get install python3-venv
    python3 -m venv flask
    . flask/bin/activate
   ```
 
-- **STEP 5: Run the install.sh file**
+- **STEP 6: Run the install.sh file**
   ```
   ./install.sh
   ```
 
-- **STEP 6: Activate the virtual environment**
+- **STEP 7: Activate the virtual environment**
   ```
   . flask/bin/activate
   ```
   
-- **STEP 7: Run the run.py file**
+- **STEP 8: Run the run.py file**
   ```
   ./run.py
   ```
