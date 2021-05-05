@@ -1,3 +1,3 @@
 #!/bin/bash
 
-. /opt/polichombr/flask/bin/activate && /opt/polichombr/db_create.py
+. /dockerinstall.sh && /opt/polichombr/flask/bin/activate && /opt/polichombr/db_create.py
