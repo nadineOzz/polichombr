@@ -5,6 +5,7 @@
 import os
 import uuid
 import logging
+import sqlite3
 
 
 DEBUG = True
