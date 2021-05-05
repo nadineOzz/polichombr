@@ -52,6 +52,11 @@ Compared to the ANSSI's project, some modifications need to be made in order to 
    sed -i 's/from werkzeug import secure_filename/from werkzeug.utils import secure_filename/g' polichombr/views/webui_families.py polichombr/views/webui_sample.py
    ```
    
+   **5. Sqlite3**
+   ```
+   sed -i '9iimport sqlite3' polichombr/config.py
+   ```
+   
   **5. Copy & run db_create.py in the current directory**
   ```
    cp ./examples/db_create.py .  
