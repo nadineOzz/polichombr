@@ -20,6 +20,5 @@ WORKDIR /opt/polichombr/
 #Execute the install.sh file 
 RUN rm init.sh \
 && echo ". /opt/polichombr/flask/bin/activate && /opt/polichombr/db_create.py" >> init.sh \
-&& chmod +x ./init.sh \
-&&  ./installd.sh
-
+&&  ./install.sh
+#&& chmod +x ./init.sh \
