@@ -32,6 +32,7 @@ Compared to the ANSSI's project, some modifications need to be made in order to 
    
   **2. Modify the conf.py file**
   ```
+  install_path=$(cd .. && pwd)
   sed -i "/SQLALCHEMY_DATABASE_URI/c\SQLALCHEMY_DATABASE_URI =\"sqlite:////$install_path/data/app.db\"" ./polichombr/config.py
   sed -i "/STORAGE_PATH/c\STORAGE_PATH =\"$install_path/data/storage\"" ./polichombr/config.py
   ```
@@ -57,7 +58,7 @@ Compared to the ANSSI's project, some modifications need to be made in order to 
    sed -i '9iimport sqlite3' polichombr/config.py
    ```
    
-  **5. Copy & run db_create.py in the current directory**
+  **6. Copy & run db_create.py in the current directory**
   ```
    cp ./examples/db_create.py .  
    python3 db_create.py
@@ -86,7 +87,5 @@ Compared to the ANSSI's project, some modifications need to be made in order to 
   ```
   ./run.py
   ```
-  
-  RQ : Add "import sqlite3" in polichombr/config.py
 
 
