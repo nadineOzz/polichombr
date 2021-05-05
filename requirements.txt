@@ -11,7 +11,7 @@ future
 pycparser
 graphviz
 marshmallow-sqlalchemy
-SQLAlchemy==1.3.13
+SQLAlchemy
 pefile
 python-magic
 requests
