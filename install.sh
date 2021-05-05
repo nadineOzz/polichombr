@@ -17,7 +17,7 @@ install_path=$(cd .. && pwd)
 echo $install_path
 
 #Modify the conf.py file
-sed -i "/SQLALCHEMY_DATABASE_URI/c\SQLALCHEMY_DATABASE_URI =\"sqlite:////$install_path/data/app.db\"" ./polichombr/config.py
+sed -i "/SQLALCHEMY_DATABASE_URI/c\SQLALCHEMY_DATABASE_URI = \"sqlite:////$install_path/data/app.db\"" ./polichombr/config.py
 sed -i "/STORAGE_PATH/c\STORAGE_PATH =\"$install_path/data/storage\"" ./polichombr/config.py
 
 cp ./examples/db_create.py .
