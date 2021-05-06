@@ -18,6 +18,6 @@ RUN git clone https://github.com/nadineOzz/polichombr.git
 WORKDIR /opt/polichombr/
 
 #Execute the install.sh file 
-RUN chmod +x ./dockerinstall.sh \
-&&  chmod +x ./execute.sh
+RUN chmod +x ./docker_install.sh \
+&&  chmod +x ./run.sh
 
