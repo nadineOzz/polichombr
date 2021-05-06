@@ -18,9 +18,5 @@ RUN git clone https://github.com/nadineOzz/polichombr.git
 WORKDIR /opt/polichombr/
 
 #Execute the install.sh file 
-RUN rm init.sh \
-&& echo ". /opt/polichombr/flask/bin/activate" >> init.sh \
-&& chmod +x ./init.sh \
-&& chmod +x ./dockerinstall.sh \
-&&  ./dockerinstall.sh
+RUN chmod +x ./dockerinstall.sh 
 
