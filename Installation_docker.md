@@ -22,7 +22,7 @@ Access the docker container
 In the docker container
 
 ```  
-   ./execute.sh
+   ./run.sh
   ```
 
 Please enjoy your new polichombr instance by accessing your host at  port 7500
