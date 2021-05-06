@@ -1,3 +1,3 @@
 #!/bin/bash
 
-./dockerinstall.sh && . flask/bin/activate && ./run.py
+./docker_install.sh && . flask/bin/activate && ./run.py
