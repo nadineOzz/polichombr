@@ -1,4 +1,4 @@
-# Installation with docker
+# Installation with docker python3
 
 To use polichombr as a docker container, we provide a *DockerFile*
 in the root directory.
@@ -22,18 +22,8 @@ Access the docker container
 In the docker container
 
 ```  
-   ./init.sh
-   ./run.sh
+   ./execute.sh
   ```
 
 Please enjoy your new polichombr instance by accessing your host at  port 7500
 
-
-*IF IT DOES NOT WORK:*
-
-Please make sure the init.sh file looks like below:
-
-```
-   . /opt/polichombr/flask/bin/activate && /opt/polichombr/db_create.py
-
-```
